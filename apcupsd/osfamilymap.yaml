@@ -12,23 +12,23 @@
 ---
 Debian:
   pkg:
-    name: TEMPLATE-debian
-  config: /etc/TEMPLATE.d/custom.conf
+    name: apcupsd-debian
+  config: /etc/apcupsd.d/custom.conf
 
 RedHat:
   pkg:
-    name: TEMPLATE-redhat
-  config: /etc/TEMPLATE.conf
+    name: apcupsd-redhat
+  config: /etc/apcupsd.conf
 
 Suse:
   pkg:
-    name: TEMPLATE-suse
+    name: apcupsd-suse
 
 Gentoo: {}
 
 Arch:
   pkg:
-    name: TEMPLATE-arch
+    name: apcupsd-arch
   service:
     name: service-arch
 

@@ -3,9 +3,9 @@
 
 {#- Get the `tplroot` from `tpldir` #}
 {%- set tplroot = tpldir.split('/')[0] %}
-{%- from tplroot ~ "/map.jinja" import TEMPLATE with context %}
+{%- from tplroot ~ "/map.jinja" import apcupsd with context %}
 
-TEMPLATE-service-clean-service-dead:
+apcupsd-service-clean-service-dead:
   service.dead:
-    - name: {{ TEMPLATE.service.name }}
+    - name: {{ apcupsd.service.name }}
     - enable: False

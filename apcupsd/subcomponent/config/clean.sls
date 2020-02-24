@@ -4,13 +4,13 @@
 {#- Get the `tplroot` from `tpldir` #}
 {%- set tplroot = tpldir.split('/')[0] %}
 {%- set sls_service_clean = tplroot ~ '.service.clean' %}
-{%- from tplroot ~ "/map.jinja" import TEMPLATE with context %}
+{%- from tplroot ~ "/map.jinja" import apcupsd with context %}
 
 include:
   - {{ sls_service_clean }}
 
-TEMPLATE-subcomponent-config-clean-file-absent:
+apcupsd-subcomponent-config-clean-file-absent:
   file.absent:
-    - name: {{ TEMPLATE.subcomponent.config }}
+    - name: {{ apcupsd.subcomponent.config }}
     - watch_in:
         - sls: {{ sls_service_clean }}
