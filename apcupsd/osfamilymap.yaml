@@ -10,38 +10,10 @@
 # you will need to provide at least an empty dict in this file, e.g.
 # osfamilymap: {}
 ---
-Debian:
-  pkg:
-    name: apcupsd-debian
-  config: /etc/apcupsd.d/custom.conf
-
-RedHat:
-  pkg:
-    name: apcupsd-redhat
-  config: /etc/apcupsd.conf
-
-Suse:
-  pkg:
-    name: apcupsd-suse
-
-Gentoo: {}
-
-Arch:
-  pkg:
-    name: apcupsd-arch
-  service:
-    name: service-arch
-
-Alpine: {}
-
 FreeBSD:
   rootgroup: wheel
+  config: '/usr/local/etc/apcupsd/apcupsd.conf'
 
 OpenBSD:
   rootgroup: wheel
-
-Solaris: {}
-
-Windows: {}
-
-MacOS: {}
+  config: '/usr/local/etc/apcupsd/apcupsd.conf'

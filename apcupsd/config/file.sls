@@ -13,7 +13,7 @@ include:
 apcupsd-config-file-file-managed:
   file.managed:
     - name: {{ apcupsd.config }}
-    - source: {{ files_switch(['example.tmpl'],
+    - source: {{ files_switch(['apcupsd.conf', 'apcupsd.conf.jinja'],
                               lookup='apcupsd-config-file-file-managed'
                  )
               }}

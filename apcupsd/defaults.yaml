@@ -5,9 +5,6 @@ apcupsd:
   pkg:
     name: apcupsd
   rootgroup: root
-  config: '/etc/apcupsd'
+  config: '/etc/apcupsd/apcupsd.conf'
   service:
     name: apcupsd
-  # Just here for testing
-  added_in_defaults: defaults_value
-  winner: defaults
