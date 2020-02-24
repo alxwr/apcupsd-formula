@@ -47,8 +47,6 @@ apcupsd:
     source_files:
       apcupsd-config-file-file-managed:
         - 'example.tmpl.jinja'
-      apcupsd-subcomponent-config-file-file-managed:
-        - 'subcomponent-example.tmpl.jinja'
 
   # Just for testing purposes
   winner: pillar

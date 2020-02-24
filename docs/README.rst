@@ -106,28 +106,6 @@ dependency on ``apcupsd.service.clean`` via include list.
 This state will remove the apcupsd package and has a depency on
 ``apcupsd.config.clean`` via include list.
 
-``apcupsd.subcomponent``
-^^^^^^^^^^^^^^^^^^^^^^^^^
-
-*Meta-state (This is a state that includes other states)*.
-
-This state installs a subcomponent configuration file before
-configuring and starting the apcupsd service.
-
-``apcupsd.subcomponent.config``
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-This state will configure the apcupsd subcomponent and has a
-dependency on ``apcupsd.config`` via include list.
-
-``apcupsd.subcomponent.config.clean``
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-This state will remove the configuration of the apcupsd subcomponent
-and reload the apcupsd service by a dependency on
-``apcupsd.service.running`` via include list and ``watch_in``
-requisite.
-
 Testing
 -------
 

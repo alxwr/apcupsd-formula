@@ -8,8 +8,6 @@ apcupsd:
   config: '/etc/apcupsd'
   service:
     name: apcupsd
-  subcomponent:
-    config: '/etc/apcupsd-subcomponent-formula.conf'
   # Just here for testing
   added_in_defaults: defaults_value
   winner: defaults
